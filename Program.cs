@@ -16,38 +16,38 @@ namespace consoleApp1
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             
-            int numberOfYears = 0;
+            int numberOfYears;
         
             Console.WriteLine("Podaj swoje imię");
             var name = Console.ReadLine();
             
             Console.WriteLine("Podaj rok urodzenia");
-            var yearOfBirth = getNumber();
+            var yearOfBirth = GetNumber();
 
 
             Console.WriteLine("Podaj miesiąc urodzenia");
-            var monthOfBirth = getNumber();
+            var monthOfBirth = GetNumber();
             
             Console.WriteLine("Podaj dzień urodzenia");
-            int dayOfBirth = getNumber();
+            int dayOfBirth = GetNumber();
 
             Console.WriteLine("Podaj miejsce urodzenia");
             string placeOfBirth = Console.ReadLine();
 
-            numberOfYears = calculateNumberOfYears(yearOfBirth, monthOfBirth , dayOfBirth);
+            numberOfYears = CalculateNumberOfYears(yearOfBirth, monthOfBirth , dayOfBirth);
             
             if (numberOfYears > -1)
             Console.WriteLine($"Cześć {name} masz {numberOfYears} lat \n urodziłeś się w {placeOfBirth}");
             Console.ReadLine();
         }
 
-        static int calculateNumberOfYears(int year, int month , int day)
+        static int CalculateNumberOfYears(int year, int month , int day)
         {
             DateTime currentDate = DateTime.Now;
-            int numberOfYears = 0;
+            int numberOfYears;
             try
             {
                 DateTime date   = new DateTime(year, month, day);
@@ -66,7 +66,7 @@ namespace consoleApp1
             return numberOfYears;
         }
 
-        static int getNumber()
+        static int GetNumber()
         {
             string input = Console.ReadLine();
             if (!int.TryParse(input, out int number))
