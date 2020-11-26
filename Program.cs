@@ -5,7 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-// imie, urodzenie rok,mie,dsz,miejsce 
+// prosimy użytkownika o podanie następujących danych:
+// imie
+// rok, miesiąc i dzień urodzenia
+// miejsce  urodzenia
+// wyswietlamy komunikat
 // cześć ... urodziłeś się ... masz x lat
 
 namespace consoleApp1
